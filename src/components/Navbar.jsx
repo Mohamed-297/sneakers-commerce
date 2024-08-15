@@ -9,9 +9,7 @@ import { MyContext } from "../App"
 export default function Navbar() {
     const [showLinks, setShowLinks] = useState(false)
     const [showDropCart, setShowDropCart] = useState(false)
-    const [isCheckingOUt,setIsCheckingOut]=useState(false)
-    // const []=useState({})
-    const[counter,setCounter,price,setPrice,prodsInCart,setProdsInCart]=useContext(MyContext)
+    const[,,,,prodsInCart,setProdsInCart]=useContext(MyContext)
 
     const styleDrop={
         height:prodsInCart.length>0?"fit-content":"30vh"

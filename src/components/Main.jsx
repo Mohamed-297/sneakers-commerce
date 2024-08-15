@@ -20,7 +20,7 @@ export default function Main() {
     const [showMainImage, setShowMainImage] = useState(mainImage1)
     const [showMainImageScroll, setShowMainImageScroll] = useState()
     const [showOverLay, setShowOverLay] = useState(false)
-    const [counter,setCounter,price,setPrice,prodsInCart,setProdsInCart]=useContext(MyContext)
+    const [counter,setCounter,price,,prodsInCart,setProdsInCart]=useContext(MyContext)
     useEffect(()=>{
         setShowMainImageScroll(showMainImage)
     },[showMainImage])
@@ -76,7 +76,9 @@ export default function Main() {
         setCounter(prevCount=>prevCount+1)
     }
     function decreaseAmount(){
-        setCounter(prevCount=>prevCount-1)
+        if(counter!==0){
+            setCounter(prevCount=>prevCount-1)
+        }
     }
     function handleItemsInCart(){
         if(counter>0){

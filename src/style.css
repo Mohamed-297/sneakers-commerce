@@ -10,8 +10,6 @@ body {
 }
 .App{
   position: relative;
-  /* background-color: red; */
-  /* z-index: 2; */
 }
 .overlay{ 
   position: fixed;
@@ -37,7 +35,6 @@ body {
 }
 .show-hamburger {
   width: 60%;
-  /* display: none; */
   flex-direction: column;
   position: absolute;
   background: white;
@@ -74,7 +71,6 @@ body {
   cursor: var(--global-cursor);
 }
 .hamburger span{
-  /* display: none; */
   height: 4px;
   width: 100%;
   border-radius: 5px;
@@ -142,7 +138,6 @@ body {
 .drop-cart{
   position: absolute;
   width: 30%;
-  /* height: 30vh; */
   top: 80px;
   right: 40px;
   background: white;
@@ -498,7 +493,6 @@ body {
     
   }
   .priceAndDiscount{
-    /* display: flex; */
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
