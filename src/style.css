@@ -465,6 +465,15 @@ body {
     display: block;
 
   }
+  .scrollImages{
+    width: 270px;
+  }
+  .nextScroll{
+    top:150px;
+  }
+  .prevScroll{
+    top:150px;
+  }
   .container{
     width: 100%;
     margin: auto;
