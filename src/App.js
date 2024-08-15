@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useContext, useState } from "react";
+import Main from "./components/Main";
+import Navbar from "./components/Navbar";
 
+export const MyContext=createContext()
 function App() {
+  const [prodsInCart,setProdsInCart]=useState([])
+  const [counter,setCounter]=useState(0)
+  const [price,setPrice]=useState("125.00")
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyContext.Provider value={[counter,setCounter,price,setPrice,prodsInCart,setProdsInCart]}>
+        <Navbar/>
+        <Main/>
+      </MyContext.Provider>
     </div>
   );
 }
